@@ -155,10 +155,13 @@ module.exports.findInsurance = async (req, res) => {
 
 module.exports.updateInsurance = async (req, res) => {
   try {
-    const insurance = await insuranceModel.findByIdAndUpdate(
+    console.log("up", req.params.iid, req.body);
+    const insurance = await insuranceModel.findByIdAndUpdate( 
       req.params.iid,
-      req.body
+      req.body.primary
     );
+    // const insurance=await insuranceModel.updateOne( mongoose.Types.ObjectId(req.params.iid), req.body);
+
     return res.status(201).json({
       insurance,
     });
@@ -167,5 +170,6 @@ module.exports.updateInsurance = async (req, res) => {
       error: e.message,
       message: "something went on updating insurance",
     });
+
   }
 };

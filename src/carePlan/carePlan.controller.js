@@ -25,8 +25,9 @@ module.exports.getAllCarePlans = async (req, res) => {
 
 module.exports.createCarePlan = async (req, res) => {
   try {
-    console.log(req.body)
+    console.log("starting working", req.body)
     const newPlan = await createNewCarePlan(req.body);
+    console.log("res ", res);
     res.status(201).json({
       status: "success",
       newPlan,
@@ -74,7 +75,7 @@ module.exports.deleteCarePlan = async (req, res) => {
 module.exports.updateCarePlan = async (req, res) => {
     try {
       const newPlan = await updateCarePlan(req.params.careid, req.body);
-  
+
       res.status(201).json({
         status: "success",
         newPlan

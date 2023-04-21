@@ -75,7 +75,7 @@ module.exports.createCarePlanType = async (req, res) => {
       error: err.message,
       data: null,
       token: null,
-      message: "Cann't create!",
+      message: "Can't create!",
     });
   }
 };
