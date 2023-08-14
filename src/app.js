@@ -18,7 +18,7 @@ require("./db/db");
 
 const app = express();
 
-console.log("running server on 3005");
+console.log("running server on 3305");
 app.use(logger("dev"));
 app.use(cors({ origin: "*" }));
 app.use(express.json());
@@ -30,7 +30,11 @@ app.use(express.urlencoded({ extended: false }));
 //   console.log(req.connection.remoteAddress, 'ip')
 //   res.json(req.headers)
 // })
-console.log("app started");
+// console.log("app started");
+
+app.get('/', (req, res) => {
+  res.send('Hello, World!');
+});
 app.use("/users", usersRouter);
 app.use("/team-member", teamMemberRouter);
 app.use("/patients", patientRouter);

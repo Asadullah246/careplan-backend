@@ -3,8 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node src/bin/www",
-    "dev": "nodemon src/bin/www",
+    "start": "node src/bin/www.js",
+    "dev": "nodemon src/bin/www.js", 
     "lint": "eslint ./src",
     "lint:fix": "eslint ./src --fix",
     "test": "mocha \\\"./test/**/*.test.js\\\" --timeout 15000 --exit"
@@ -31,6 +31,6 @@
     "nodemon": "^2.0.12"
   },
   "engines": {
-    "node": "16.x"
+    "node": "18.x"
   }
 }
