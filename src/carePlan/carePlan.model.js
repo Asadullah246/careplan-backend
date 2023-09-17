@@ -87,7 +87,7 @@ const carePlanSchema = new mongoose.Schema(
       insuranceCoverage: Number,
       insuranceSavings: Number,
       monthlyCost: Number,
-      defaultFeeScheduleCost: Number, 
+      defaultFeeScheduleCost: Number,
       discountedAmount:Number,
     },
     feeSchedule: {
